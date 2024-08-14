@@ -19,10 +19,16 @@ jobs:
           azure-client-id: ${{ secrets.AZURE_CLIENT_ID }}
           azure-client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
           endpoint: https://eus.codesigning.azure.net/
-          code-signing-account-name: ${{ secrets.AZURE_CODE_SIGNING_NAME }}
+          trusted-signing-account-name: ${{ secrets.AZURE_CODE_SIGNING_NAME }}
           certificate-profile-name: ${{ secrets.AZURE_CERT_PROFILE_NAME }}
           files-folder: files
           files-folder-filter: exe,dll
           file-digest: SHA256
           timestamp-rfc3161: http://timestamp.acs.microsoft.com
           timestamp-digest: SHA256
+      - name: Upload signed files
+        uses: actions/upload-artifact@v3
+        with:
+          name: signed-files
+          path: files
+           
