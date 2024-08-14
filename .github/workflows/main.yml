@@ -21,7 +21,7 @@ jobs:
           endpoint: https://eus.codesigning.azure.net/
           code-signing-account-name: ${{ secrets.AZURE_CODE_SIGNING_NAME }}
           certificate-profile-name: ${{ secrets.AZURE_CERT_PROFILE_NAME }}
-          files-folder: ${{ github.workspace }}\App\App\bin\Release\net8.0-windows
+          files-folder: files
           files-folder-filter: exe,dll
           file-digest: SHA256
           timestamp-rfc3161: http://timestamp.acs.microsoft.com
