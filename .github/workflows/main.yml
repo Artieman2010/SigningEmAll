@@ -26,5 +26,9 @@ jobs:
           file-digest: SHA256
           timestamp-rfc3161: http://timestamp.acs.microsoft.com
           timestamp-digest: SHA256
-          append-signature: true
+      - name: Upload signed files
+        uses: actions/upload-artifact@v3
+        with:
+          name: signed-files
+          path: files
            
