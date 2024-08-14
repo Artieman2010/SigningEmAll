@@ -30,7 +30,7 @@ jobs:
           endpoint: https://eus.codesigning.azure.net/
           trusted-signing-account-name: vscx-codesigning
           certificate-profile-name: vscx-certificate-profile
-          files-folder: ${{ github.workspace }}\App\App\bin\Release\net6.0-windows
+          files-folder: files
           files-folder-filter: exe
           file-digest: SHA256
           timestamp-rfc3161: http://timestamp.acs.microsoft.com
