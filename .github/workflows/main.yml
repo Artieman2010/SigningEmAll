@@ -25,8 +25,8 @@ jobs:
           azure-client-id: ${{ secrets.AZURE_CLIENT_ID }}
           azure-client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
           endpoint: https://eus.codesigning.azure.net/
-          trusted-signing-account-name: vscx-codesigning
-          certificate-profile-name: vscx-certificate-profile
+          code-signing-account-name: ${{ secrets.AZURE_CODE_SIGNING_NAME }}
+          certificate-profile-name: ${{ secrets.AZURE_CERT_PROFILE_NAME }}
           files-folder: ${{ github.workspace }}\App\App\bin\Release\net8.0-windows
           files-folder-filter: exe,dll
           file-digest: SHA256
