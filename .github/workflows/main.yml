@@ -10,10 +10,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install dependencies
-        # Adjust or remove if not needed for your setup
-        run: dotnet restore
-
 
 
       - name: Sign files with Trusted Signing
