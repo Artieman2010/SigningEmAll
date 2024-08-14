@@ -14,9 +14,7 @@ jobs:
         # Adjust or remove if not needed for your setup
         run: dotnet restore
 
-      - name: Build
-        # Adjust or remove if not needed for your setup
-        run: dotnet build --configuration Release --no-restore
+
 
       - name: Sign files with Trusted Signing
         uses: azure/trusted-signing-action@v0.4.0
