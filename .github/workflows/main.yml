@@ -2,7 +2,7 @@ on:
   push:
     branches: [main]
 
-jobs:
+jobs: 
   build-and-sign:
     runs-on: windows-latest
     name: Build app and sign files with Trusted Signing
